@@ -48,7 +48,7 @@ namespace Bai07_Lab04
                     AuthToken.TokenType = tokenType;
                     AuthToken.AccessToken = accessToken;
 
-                    MessageBox.Show($"Đăng nhập thành công!\nToken Type: {tokenType}\nAccess Token: {accessToken}", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
+                    MessageBox.Show($"Đăng nhập thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
                     frm_Main mainFrm = new frm_Main();
                     mainFrm.lblWelcome_Change(username); 
                     mainFrm.Show(); 

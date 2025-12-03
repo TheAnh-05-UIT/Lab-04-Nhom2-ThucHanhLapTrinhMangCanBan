@@ -43,6 +43,7 @@
             this.lblPageSize = new System.Windows.Forms.Label();
             this.cobPage = new System.Windows.Forms.ComboBox();
             this.cobPageSize = new System.Windows.Forms.ComboBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.tabControlMain.SuspendLayout();
             this.tabPageAll.SuspendLayout();
             this.tabPageDongGop.SuspendLayout();
@@ -67,7 +68,7 @@
             this.btnAnGiGio.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAnGiGio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnGiGio.ForeColor = System.Drawing.Color.Black;
-            this.btnAnGiGio.Location = new System.Drawing.Point(380, 50);
+            this.btnAnGiGio.Location = new System.Drawing.Point(341, 50);
             this.btnAnGiGio.Name = "btnAnGiGio";
             this.btnAnGiGio.Size = new System.Drawing.Size(128, 45);
             this.btnAnGiGio.TabIndex = 1;
@@ -83,7 +84,7 @@
             this.btnThemMonAn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnThemMonAn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMonAn.ForeColor = System.Drawing.Color.Black;
-            this.btnThemMonAn.Location = new System.Drawing.Point(514, 50);
+            this.btnThemMonAn.Location = new System.Drawing.Point(475, 50);
             this.btnThemMonAn.Name = "btnThemMonAn";
             this.btnThemMonAn.Size = new System.Drawing.Size(128, 45);
             this.btnThemMonAn.TabIndex = 2;
@@ -107,18 +108,18 @@
             this.tabControlMain.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
             this.tabControlMain.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.tabControlMain.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
-            this.tabControlMain.TabButtonIdleState.FillColor = System.Drawing.Color.Gold;
+            this.tabControlMain.TabButtonIdleState.FillColor = System.Drawing.Color.LightGray;
             this.tabControlMain.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.tabControlMain.TabButtonIdleState.ForeColor = System.Drawing.Color.Black;
             this.tabControlMain.TabButtonIdleState.InnerColor = System.Drawing.Color.Black;
             this.tabControlMain.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.tabControlMain.TabButtonSelectedState.FillColor = System.Drawing.Color.Gold;
+            this.tabControlMain.TabButtonSelectedState.FillColor = System.Drawing.Color.LightGray;
             this.tabControlMain.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.tabControlMain.TabButtonSelectedState.ForeColor = System.Drawing.Color.Black;
             this.tabControlMain.TabButtonSelectedState.InnerColor = System.Drawing.Color.Black;
             this.tabControlMain.TabButtonSize = new System.Drawing.Size(180, 40);
             this.tabControlMain.TabIndex = 3;
-            this.tabControlMain.TabMenuBackColor = System.Drawing.Color.LightSalmon;
+            this.tabControlMain.TabMenuBackColor = System.Drawing.Color.LightGray;
             // 
             // tabPageAll
             // 
@@ -233,11 +234,28 @@
             this.cobPageSize.Size = new System.Drawing.Size(44, 21);
             this.cobPageSize.TabIndex = 10;
             // 
+            // btnClose
+            // 
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(609, 50);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(128, 45);
+            this.btnClose.TabIndex = 11;
+            this.btnClose.Text = "Thoát";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 508);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cobPageSize);
             this.Controls.Add(this.cobPage);
             this.Controls.Add(this.lblPageSize);
@@ -276,6 +294,7 @@
         private System.Windows.Forms.ComboBox cobPageSize;
         private System.Windows.Forms.FlowLayoutPanel flpAll;
         private System.Windows.Forms.FlowLayoutPanel flpMy;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
     }
 }
 

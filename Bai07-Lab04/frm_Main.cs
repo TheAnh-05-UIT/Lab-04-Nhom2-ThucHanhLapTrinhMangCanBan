@@ -303,5 +303,10 @@ namespace Bai07_Lab04
         {
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

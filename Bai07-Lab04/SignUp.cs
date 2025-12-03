@@ -33,7 +33,7 @@ namespace Bai07_Lab04
             int sex = rabtnMale.Checked ? 0 : rabtnFemale.Checked ? 1 : 2;
             if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email))
             {
-                MessageBox.Show("Username, Password, and Email are required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập tên đăng nhập/ mật khẩu/ email", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             var data = new
@@ -56,8 +56,8 @@ namespace Bai07_Lab04
                 if (response.IsSuccessStatusCode)
                 {
                     var responseBody = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show("Đăng ký thành công!\nPhản hồi: " + responseBody, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   // this.Close();
+                    MessageBox.Show("Đăng ký thành công!" , "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
 
                 }
                 else
@@ -89,7 +89,19 @@ namespace Bai07_Lab04
                 MessageBox.Show("Lỗi kết nối: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
-        
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtUsername.Clear();
+            txtPassword.Clear();
+            txtEmail.Clear();
+            txtPhone.Clear();
+            txtFirstname.Clear();
+            txtLastname.Clear();
+            dtpBirthday.Value = DateTime.Now;
+            cobLanguage.SelectedIndex = -1;
+            rabtnFemale.Checked = false;
+            rabtnMale.Checked = false;
+        }
     }
 }
