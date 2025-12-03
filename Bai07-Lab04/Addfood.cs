@@ -177,5 +177,10 @@ namespace Bai07_Lab04
             txtPrice.Clear();
             richtxtMoTa.Clear();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -35,21 +35,21 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.groupBoxInformation = new System.Windows.Forms.GroupBox();
-            this.txtFirstname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblLastname = new System.Windows.Forms.Label();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.rabtnFemale = new System.Windows.Forms.RadioButton();
+            this.rabtnMale = new System.Windows.Forms.RadioButton();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.cobLanguage = new System.Windows.Forms.ComboBox();
+            this.lblSex = new System.Windows.Forms.Label();
+            this.lblLanguage = new System.Windows.Forms.Label();
+            this.lblBirthday = new System.Windows.Forms.Label();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.lblBirthday = new System.Windows.Forms.Label();
-            this.lblLanguage = new System.Windows.Forms.Label();
-            this.lblSex = new System.Windows.Forms.Label();
-            this.cobLanguage = new System.Windows.Forms.ComboBox();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
-            this.rabtnMale = new System.Windows.Forms.RadioButton();
-            this.rabtnFemale = new System.Windows.Forms.RadioButton();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblLastname = new System.Windows.Forms.Label();
+            this.txtFirstname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.groupBoxSignUp.SuspendLayout();
@@ -160,89 +160,75 @@
             this.groupBoxInformation.TabStop = false;
             this.groupBoxInformation.Text = "User Information";
             // 
-            // txtFirstname
+            // rabtnFemale
             // 
-            this.txtFirstname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFirstname.DefaultText = "";
-            this.txtFirstname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFirstname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFirstname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFirstname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFirstname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstname.Location = new System.Drawing.Point(121, 71);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.PlaceholderText = "";
-            this.txtFirstname.SelectedText = "";
-            this.txtFirstname.Size = new System.Drawing.Size(256, 28);
-            this.txtFirstname.TabIndex = 9;
+            this.rabtnFemale.AutoSize = true;
+            this.rabtnFemale.Location = new System.Drawing.Point(257, 326);
+            this.rabtnFemale.Name = "rabtnFemale";
+            this.rabtnFemale.Size = new System.Drawing.Size(61, 17);
+            this.rabtnFemale.TabIndex = 22;
+            this.rabtnFemale.TabStop = true;
+            this.rabtnFemale.Text = "Female";
+            this.rabtnFemale.UseVisualStyleBackColor = true;
             // 
-            // lblFirstName
+            // rabtnMale
             // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(26, 82);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(64, 17);
-            this.lblFirstName.TabIndex = 8;
-            this.lblFirstName.Text = "Firstname";
+            this.rabtnMale.AutoSize = true;
+            this.rabtnMale.Location = new System.Drawing.Point(124, 325);
+            this.rabtnMale.Name = "rabtnMale";
+            this.rabtnMale.Size = new System.Drawing.Size(50, 17);
+            this.rabtnMale.TabIndex = 21;
+            this.rabtnMale.TabStop = true;
+            this.rabtnMale.Text = "Male";
+            this.rabtnMale.UseVisualStyleBackColor = true;
             // 
-            // txtLastname
+            // dtpBirthday
             // 
-            this.txtLastname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLastname.DefaultText = "";
-            this.txtLastname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLastname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLastname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastname.Location = new System.Drawing.Point(121, 129);
-            this.txtLastname.Name = "txtLastname";
-            this.txtLastname.PlaceholderText = "";
-            this.txtLastname.SelectedText = "";
-            this.txtLastname.Size = new System.Drawing.Size(256, 28);
-            this.txtLastname.TabIndex = 11;
+            this.dtpBirthday.Location = new System.Drawing.Point(121, 227);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(256, 22);
+            this.dtpBirthday.TabIndex = 20;
             // 
-            // lblLastname
+            // cobLanguage
             // 
-            this.lblLastname.AutoSize = true;
-            this.lblLastname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastname.Location = new System.Drawing.Point(26, 140);
-            this.lblLastname.Name = "lblLastname";
-            this.lblLastname.Size = new System.Drawing.Size(63, 17);
-            this.lblLastname.TabIndex = 10;
-            this.lblLastname.Text = "Lastname";
+            this.cobLanguage.FormattingEnabled = true;
+            this.cobLanguage.Items.AddRange(new object[] {
+            "vi",
+            "en"});
+            this.cobLanguage.Location = new System.Drawing.Point(124, 274);
+            this.cobLanguage.Name = "cobLanguage";
+            this.cobLanguage.Size = new System.Drawing.Size(253, 21);
+            this.cobLanguage.TabIndex = 19;
             // 
-            // txtEmail
+            // lblSex
             // 
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(121, 19);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PlaceholderText = "";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(256, 28);
-            this.txtEmail.TabIndex = 13;
+            this.lblSex.AutoSize = true;
+            this.lblSex.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.Location = new System.Drawing.Point(26, 325);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(28, 17);
+            this.lblSex.TabIndex = 18;
+            this.lblSex.Text = "Sex";
             // 
-            // lblEmail
+            // lblLanguage
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(26, 30);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(39, 17);
-            this.lblEmail.TabIndex = 12;
-            this.lblEmail.Text = "Email";
+            this.lblLanguage.AutoSize = true;
+            this.lblLanguage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLanguage.Location = new System.Drawing.Point(26, 278);
+            this.lblLanguage.Name = "lblLanguage";
+            this.lblLanguage.Size = new System.Drawing.Size(65, 17);
+            this.lblLanguage.TabIndex = 17;
+            this.lblLanguage.Text = "Language";
+            // 
+            // lblBirthday
+            // 
+            this.lblBirthday.AutoSize = true;
+            this.lblBirthday.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirthday.Location = new System.Drawing.Point(26, 232);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(55, 17);
+            this.lblBirthday.TabIndex = 16;
+            this.lblBirthday.Text = "Birthday";
             // 
             // txtPhone
             // 
@@ -272,75 +258,89 @@
             this.lblPhone.TabIndex = 14;
             this.lblPhone.Text = "Phone";
             // 
-            // lblBirthday
+            // txtEmail
             // 
-            this.lblBirthday.AutoSize = true;
-            this.lblBirthday.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthday.Location = new System.Drawing.Point(26, 232);
-            this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(55, 17);
-            this.lblBirthday.TabIndex = 16;
-            this.lblBirthday.Text = "Birthday";
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Location = new System.Drawing.Point(121, 19);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(256, 28);
+            this.txtEmail.TabIndex = 13;
             // 
-            // lblLanguage
+            // lblEmail
             // 
-            this.lblLanguage.AutoSize = true;
-            this.lblLanguage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLanguage.Location = new System.Drawing.Point(26, 278);
-            this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(65, 17);
-            this.lblLanguage.TabIndex = 17;
-            this.lblLanguage.Text = "Language";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(26, 30);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(39, 17);
+            this.lblEmail.TabIndex = 12;
+            this.lblEmail.Text = "Email";
             // 
-            // lblSex
+            // txtLastname
             // 
-            this.lblSex.AutoSize = true;
-            this.lblSex.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSex.Location = new System.Drawing.Point(26, 325);
-            this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(28, 17);
-            this.lblSex.TabIndex = 18;
-            this.lblSex.Text = "Sex";
+            this.txtLastname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLastname.DefaultText = "";
+            this.txtLastname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLastname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLastname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastname.Location = new System.Drawing.Point(121, 129);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.PlaceholderText = "";
+            this.txtLastname.SelectedText = "";
+            this.txtLastname.Size = new System.Drawing.Size(256, 28);
+            this.txtLastname.TabIndex = 11;
             // 
-            // cobLanguage
+            // lblLastname
             // 
-            this.cobLanguage.FormattingEnabled = true;
-            this.cobLanguage.Items.AddRange(new object[] {
-            "vi",
-            "en"});
-            this.cobLanguage.Location = new System.Drawing.Point(124, 274);
-            this.cobLanguage.Name = "cobLanguage";
-            this.cobLanguage.Size = new System.Drawing.Size(253, 21);
-            this.cobLanguage.TabIndex = 19;
+            this.lblLastname.AutoSize = true;
+            this.lblLastname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastname.Location = new System.Drawing.Point(26, 140);
+            this.lblLastname.Name = "lblLastname";
+            this.lblLastname.Size = new System.Drawing.Size(63, 17);
+            this.lblLastname.TabIndex = 10;
+            this.lblLastname.Text = "Lastname";
             // 
-            // dtpBirthday
+            // txtFirstname
             // 
-            this.dtpBirthday.Location = new System.Drawing.Point(121, 227);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(256, 22);
-            this.dtpBirthday.TabIndex = 20;
+            this.txtFirstname.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFirstname.DefaultText = "";
+            this.txtFirstname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFirstname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFirstname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFirstname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFirstname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFirstname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFirstname.Location = new System.Drawing.Point(121, 71);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.PlaceholderText = "";
+            this.txtFirstname.SelectedText = "";
+            this.txtFirstname.Size = new System.Drawing.Size(256, 28);
+            this.txtFirstname.TabIndex = 9;
             // 
-            // rabtnMale
+            // lblFirstName
             // 
-            this.rabtnMale.AutoSize = true;
-            this.rabtnMale.Location = new System.Drawing.Point(124, 325);
-            this.rabtnMale.Name = "rabtnMale";
-            this.rabtnMale.Size = new System.Drawing.Size(50, 17);
-            this.rabtnMale.TabIndex = 21;
-            this.rabtnMale.TabStop = true;
-            this.rabtnMale.Text = "Male";
-            this.rabtnMale.UseVisualStyleBackColor = true;
-            // 
-            // rabtnFemale
-            // 
-            this.rabtnFemale.AutoSize = true;
-            this.rabtnFemale.Location = new System.Drawing.Point(257, 326);
-            this.rabtnFemale.Name = "rabtnFemale";
-            this.rabtnFemale.Size = new System.Drawing.Size(61, 17);
-            this.rabtnFemale.TabIndex = 22;
-            this.rabtnFemale.TabStop = true;
-            this.rabtnFemale.Text = "Female";
-            this.rabtnFemale.UseVisualStyleBackColor = true;
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(26, 82);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(64, 17);
+            this.lblFirstName.TabIndex = 8;
+            this.lblFirstName.Text = "Firstname";
             // 
             // btnClear
             // 
@@ -356,6 +356,7 @@
             this.btnClear.Size = new System.Drawing.Size(89, 26);
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSubmit
             // 
@@ -377,6 +378,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(514, 663);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnClear);
