@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;     
-using System.Net;     
+using System.IO;
+using System.Net;
 using System.Windows.Forms;
-using System.Diagnostics; 
-using HtmlAgilityPack;  
+using System.Diagnostics;
+using HtmlAgilityPack;
 using Newtonsoft.Json;
 using System.Text;
 using System.Linq;
@@ -180,6 +180,10 @@ namespace Bai04_Lab04
         {
             clbGhe.Items.Clear();
             List<string> daBan = gheDaBan[phong];
+            if (gheDaBan.ContainsKey(phong))
+            {
+                daBan = gheDaBan[phong];
+            }
             string[] hang = { "A", "B", "C" };
 
             foreach (var h in hang)
@@ -188,9 +192,9 @@ namespace Bai04_Lab04
                 {
                     string ghe = h + i;
                     if (daBan.Contains(ghe))
-                        clbGhe.Items.Add(ghe + " (Đã bán)", CheckState.Indeterminate);
+                        clbGhe.Items.Add(ghe + " (Đã bán)", CheckState.Unchecked);
                     else
-                        clbGhe.Items.Add(ghe);
+                        clbGhe.Items.Add(ghe, CheckState.Unchecked);
                 }
             }
         }
@@ -222,43 +226,68 @@ namespace Bai04_Lab04
 
             Phim phim = cbPhim.SelectedItem as Phim;
             int phong = (int)cbPhong.SelectedItem;
-            double tongTien = 0;
-            List<string> gheChon = new List<string>();
 
             foreach (var item in clbGhe.CheckedItems)
             {
                 string s = item.ToString();
 
+                string tenGheCheck = s.Split('(')[0].Trim();
+
                 if (s.Contains("(Đã bán)"))
                 {
-                    MessageBox.Show($"Ghế {s} đã có người mua. Vui lòng bỏ chọn!");
+                    MessageBox.Show($"Ghế {s} đã bán, vui lòng bỏ chọn!");
                     return;
                 }
 
-                string tenGhe = s;
+                if (gheDaBan.ContainsKey(phong) && gheDaBan[phong].Contains(tenGheCheck))
+                {
+                    MessageBox.Show($"Ghế {tenGheCheck} vừa có người khác mua xong! Vui lòng chọn ghế khác.");
+                    LoadGhe(phong);
+                    return;
+                }
+            }
+
+            double tongTien = 0;
+            List<string> gheInHoaDon = new List<string>();
+            List<string> gheCanLuu = new List<string>();
+
+            foreach (var item in clbGhe.CheckedItems)
+            {
+                string tenGhe = item.ToString();
 
                 double giaGheNay = TinhTien(tenGhe, phim.GiaVeChuan);
 
                 tongTien += giaGheNay;
 
-                gheChon.Add($"{tenGhe} ({giaGheNay:N0})");
+                gheInHoaDon.Add($"{tenGhe} ({giaGheNay:N0})");
+
+                gheCanLuu.Add(tenGhe);
+            }
+
+            if (gheDaBan.ContainsKey(phong))
+            {
+                gheDaBan[phong].AddRange(gheCanLuu);
             }
 
             rtbKetQua.Text = "";
-            rtbKetQua.AppendText("=== HÓA ĐƠN THANH TOÁN ===\n");
+            rtbKetQua.AppendText("           HÓA ĐƠN THANH TOÁN         \n");
+            rtbKetQua.AppendText("--------------------------------\n");
             rtbKetQua.AppendText($"Khách hàng: {txtHoTen.Text}\n");
             rtbKetQua.AppendText($"Phim: {phim.TenPhim}\n");
             rtbKetQua.AppendText($"Phòng: {phong}\n");
 
             rtbKetQua.AppendText("Chi tiết ghế:\n");
-            foreach (var g in gheChon)
+            foreach (var g in gheInHoaDon)
             {
                 rtbKetQua.AppendText($"  + {g} VNĐ\n");
             }
 
-            rtbKetQua.AppendText("--------------------------\n");
+            rtbKetQua.AppendText("--------------------------------\n");
             rtbKetQua.AppendText($"TỔNG TIỀN: {tongTien:N0} VNĐ\n");
-            rtbKetQua.AppendText("==========================\n");
+            rtbKetQua.AppendText("================================\n");
+
+            MessageBox.Show("Đặt vé thành công!");
+
             LoadGhe(phong);
         }
 
@@ -271,6 +300,18 @@ namespace Bai04_Lab04
                 return giaChuan * 2.0;
 
             return giaChuan;
+        }
+
+        private void clbGhe_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            string gheDangChon = clbGhe.Items[e.Index].ToString();
+
+            if (gheDangChon.Contains("(Đã bán)") && e.NewValue == CheckState.Checked)
+            {
+                MessageBox.Show("Ghế này đã bán, bạn không thể chọn!", "Thông báo");
+
+                e.NewValue = e.CurrentValue;
+            }
         }
     }
 }
@@ -286,6 +327,6 @@ public class Phim
 
     public Phim()
     {
-        PhongChieu = new List<int> { 1, 2, 3 }; // Mặc định phim nào cũng chiếu 3 phòng này
+        PhongChieu = new List<int> { 1, 2, 3 };
     }
 }

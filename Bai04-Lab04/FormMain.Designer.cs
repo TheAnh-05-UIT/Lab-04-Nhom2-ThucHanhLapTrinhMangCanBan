@@ -107,13 +107,14 @@
             this.clbGhe.FormattingEnabled = true;
             this.clbGhe.Location = new System.Drawing.Point(184, 192);
             this.clbGhe.Name = "clbGhe";
-            this.clbGhe.Size = new System.Drawing.Size(120, 96);
+            this.clbGhe.Size = new System.Drawing.Size(256, 96);
             this.clbGhe.TabIndex = 10;
             // 
             // rtbKetQua
             // 
             this.rtbKetQua.Location = new System.Drawing.Point(556, 35);
             this.rtbKetQua.Name = "rtbKetQua";
+            this.rtbKetQua.ReadOnly = true;
             this.rtbKetQua.Size = new System.Drawing.Size(385, 295);
             this.rtbKetQua.TabIndex = 9;
             this.rtbKetQua.Text = "";
@@ -207,7 +208,8 @@
             this.Controls.Add(this.btnLayDuLieu);
             this.Controls.Add(this.txtUrl);
             this.Name = "FormMain";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản lý phòng vé";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.clbChoNgoi.ResumeLayout(false);
             this.clbChoNgoi.PerformLayout();
