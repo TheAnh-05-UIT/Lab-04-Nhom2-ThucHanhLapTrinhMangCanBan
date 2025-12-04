@@ -9,7 +9,7 @@
 | Trần Minh Hoàng Quân  |   24521454     |
 | Nguyễn Quang Thế Anh   |   24520115     |
 | Trần Anh Hào  |   24520462     |
-## Lab04 Gồm 7 bài tập về lập trình socket
+## Lab04 Gồm 7 bài tập
 * Phạm Phú Quang thực hành bài 7
 * Trần Minh Hoàng Quân thực hành bài 1, 2, 3
 * Nguyễn Quang Thế Anh thực hành bài 4
