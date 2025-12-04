@@ -1,5 +1,5 @@
 # Thực Hành Lập Trình Mạng Căn Bản (NT106.Q14.1 NHÓM 2)
-## Lab04 - Working with Web Server in C#
+## Lab05 - Sending & Receiving Email in C#
 > Giáo viên hướng dẫn: ThS. Lê Minh Khánh Hội
 
 ## THÔNG TIN CÁC THÀNH VIÊN
@@ -9,8 +9,8 @@
 | Trần Minh Hoàng Quân  |   24521454     |
 | Nguyễn Quang Thế Anh   |   24520115     |
 | Trần Anh Hào  |   24520462     |
-## Lab04 Gồm 7 bài tập
-* Phạm Phú Quang thực hành bài 7
-* Trần Minh Hoàng Quân thực hành bài 1, 2, 3
-* Nguyễn Quang Thế Anh thực hành bài 4
-* Trần Anh Hào thực hành bài 5, 6
+## Lab05 Gồm 6 bài tập
+* Phạm Phú Quang thực hành bài 5
+* Trần Minh Hoàng Quân thực hành bài 2, 3
+* Nguyễn Quang Thế Anh thực hành bài 1, 4
+* Trần Anh Hào thực hành bài 6
