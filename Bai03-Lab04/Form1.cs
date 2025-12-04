@@ -29,7 +29,7 @@ namespace Bai03_Lab04
         private void btnDownResources_Click(object sender, EventArgs e)
         {
             string url = txtURL.Text.Trim();
-            string folder = "E:\\WebBrowser\\Images";
+            string folder = "D:\\C#";
             Directory.CreateDirectory(folder);
 
             WebClient client = new WebClient();
@@ -65,7 +65,7 @@ namespace Bai03_Lab04
         private void btnDownFiles_Click(object sender, EventArgs e)
         {
             string url = txtURL.Text.Trim();
-            string folder = "E:\\WebBrowser";
+            string folder = "D:\\C#";
             string filePath = folder + "\\page.html";
 
             Directory.CreateDirectory(folder);
