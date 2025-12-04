@@ -10,7 +10,7 @@
 | Nguyễn Quang Thế Anh   |   24520115     |
 | Trần Anh Hào  |   24520462     |
 ## Lab05 Gồm 6 bài tập
-* Phạm Phú Quang thực hành bài 5
-* Trần Minh Hoàng Quân thực hành bài 2, 3
-* Nguyễn Quang Thế Anh thực hành bài 1, 4
-* Trần Anh Hào thực hành bài 6
+* Phạm Phú Quang thực hành bài 7
+* Trần Minh Hoàng Quân thực hành bài 1, 2, 3
+* Nguyễn Quang Thế Anh thực hành bài 4
+* Trần Anh Hào thực hành bài 5, 6
